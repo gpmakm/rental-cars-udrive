@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import React from 'react'
 import Head from 'next/head';
-import applog from './UdriveImages/Applogo.jpg'
-import Footer from './Footer';
+
+import geetaPic from '../public/geetaPic.jpg'
+import quranPic from '../public/quranPic.jpg'
+import biblePic from '../public/biblePic.jpg'
 
 const page = () => {
 
@@ -11,36 +13,26 @@ const page = () => {
 
 
   
-    <div className="container">
-      <Head>
-        <title>udrive | Your Trusted Car Rental</title>
-        <meta name="description" content="Your trusted partner in car rentals" />
-      </Head>
-      
-      <header className="header">
-        
-      <Image src={applog} width={300} height={300}/>
-        <h1 className="title">Welcome to udrive</h1>
-        <p> Your trusted partner in car rentals. Explore our wide range of vehicles and services to suit all your travel needs. <br/>
-        Contact us at :- +91 8109112179, Address:- Saket nagar, BDA complex bhopal, Bhopal, MP, 462025
-        </p>
-     
-      <main className="main">
-      <div className="fading-text">U-drive cars</div> <br/>
-       
-      </main>
-      
-   
-      </header>
-      <div className='aboutUs'>
-        <h3>About us</h3>
-        <p>We are leading car renting professionals from Bhopal, India. We have all type of cars for each and every ocassions and functions. Also for your trips. We provide bhaukaal, personality representative cars for each kind of person.</p>
+    <div className="container" style={{display:'flex',flexDirection:'column', justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+      <p style={{fontFamily:'cursive',width:300
+      ,margin:5,border:'1px solid grey',borderRadius:28,padding:15}}>
+        Welcome to our website. The one platform to provide you free and sharable quotes of multiple categories like modern, religious, coders and more. If you are feeling demotivated, tired from the tensions of the physical world or need any quote for your status updates get all kinds of them here. 
+      </p>
+      <div className='homeContainer'>
+       <div className='religiousquote'>
+          <Image src={geetaPic} width={200} height={100} alt='BhagwatGeeta Pic'/>
+          <p>Choose a great battlefield then you will find a better you.</p>
+       </div>
+       <div className='religiousquote'>
+<Image src={quranPic} width={200} height={100} alt='Quran Pic'/>
+ <p>Just trust on Allah, he will give you a better life.</p>
+       </div>
+       <div className='religiousquote'>
+<Image src={biblePic} width={200} height={100} alt='Bible Pic'/>
+ <p>Be kind so that God be kind on you.</p>
+       </div>
       </div>
-      {/* <footer className="footer">
-        &copy; 2025 udrive. All rights reserved.
-      </footer> */}
-      <Footer/>
-    </div>
+     </div>
  
 
 

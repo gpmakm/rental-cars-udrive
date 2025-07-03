@@ -1,14 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-import instagramLogo from './UdriveImages/instagram.png'
+import instagramLogo from '../public/instagram.png'
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <div className='footer' style={{height:50,width:100}}>
 
-        Follow us on : <br />
+        Follow developer on : <br />
         <div>
-            <Image src={instagramLogo} width={30} height={30} id='socialmedia'/> - <a href="https://www.instagram.com/udrive_car?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">udrive_car</a>
+           <a href="https://www.instagram.com/the_dev_page/?__pwa=1"> <Image src={instagramLogo} id='socialmedia'/> - the_dev_page</a>
            
         </div>
 

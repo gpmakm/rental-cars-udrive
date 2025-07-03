@@ -1,0 +1,44 @@
+[
+    {
+        "author":"John Johnson",
+        "quote":"First, solve the problem. Then write the code."
+    },
+    {
+        "author":"Anonymous",
+        "quote":"It is not a bug, it is an undocumented feature."
+    },
+    {
+        "author":"Oscar Wilde",
+        "quote":"Experience is the name everyone gives to their mistakes."
+    },
+    {
+        "author":"Robert C. Martin",
+        "quote":"Clean code always looks like it was written by someone who cares."
+    },
+    {
+        "author":"Linus Torvalds",
+        "quote":"Talk is cheap. Show me the code."
+    },
+    {
+        "author":"Jim Highsmith",
+        "quote":"The best way to get a project done faster is to start sooner."
+    },
+    {
+        "author":"Austin Freeman",
+        "quote":"Simplicity is the soul of efficiency."
+    },
+    {
+        "author":"Ron Jeffries",
+        "quote":"Code never lies, comments sometime do."
+    },
+    {
+        "author":"Harold Abelson",
+        "quote":"Programs must be written for people to read, and only the incidentally for machines to execute."
+    }, 
+     {
+        "author":"Doug Linder",
+        "quote":"A good programmer is someone who looks both ways before crossing a onw-way street."
+    }
+
+    
+]

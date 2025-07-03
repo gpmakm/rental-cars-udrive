@@ -1,19 +1,21 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
-import home from './UdriveImages/icons8-home.gif'
+//import home from './UdriveImages/icons8-home.gif'
 
 const Navbar = () => {
   return (
     
    <nav>
-    <span id="nav">Udrive car rental</span>
+    <span id="nav">SuktiSutram</span>
     <ul>
-        <li><Link href={"/"} className="links">Home</Link></li>
-        <li> <Link href={"/attach-your-car"} className="links">Attach-car</Link> </li>
+        <li><a href={"/"} className="links">Home</a></li>
+        <li> <a href={"/religious"} className='links'>Religious quotes</a> </li>
+        <li> <a href={"/modern"} className='links'>Modern quotes</a> </li>
+        <li> <a href={"/coders"} className='links'>Coders quotes</a> </li>
+          <li> <a href={"/my-portfolio"} className='links'>Dev's portfolio</a> </li>
        
-        <li> <Link href={"/cars"} className="links">Cars</Link> </li>
-        <li> <Link href={"/bookings"} className="links" id='bookIt'>Book a car</Link> </li>
+
     </ul>
     
    </nav>
