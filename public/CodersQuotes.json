@@ -1,44 +1,78 @@
 [
     {
-        "author":"John Johnson",
-        "quote":"First, solve the problem. Then write the code."
+        "author": "John Johnson",
+        "quote": "First, solve the problem. Then write the code."
     },
     {
-        "author":"Anonymous",
-        "quote":"It is not a bug, it is an undocumented feature."
+        "author": "Anonymous",
+        "quote": "It is not a bug, it is an undocumented feature."
     },
     {
-        "author":"Oscar Wilde",
-        "quote":"Experience is the name everyone gives to their mistakes."
+        "author": "Oscar Wilde",
+        "quote": "Experience is the name everyone gives to their mistakes."
     },
     {
-        "author":"Robert C. Martin",
-        "quote":"Clean code always looks like it was written by someone who cares."
+        "author": "Robert C. Martin",
+        "quote": "Clean code always looks like it was written by someone who cares."
     },
     {
-        "author":"Linus Torvalds",
-        "quote":"Talk is cheap. Show me the code."
+        "author": "Linus Torvalds",
+        "quote": "Talk is cheap. Show me the code."
     },
     {
-        "author":"Jim Highsmith",
-        "quote":"The best way to get a project done faster is to start sooner."
+        "author": "Jim Highsmith",
+        "quote": "The best way to get a project done faster is to start sooner."
     },
     {
-        "author":"Austin Freeman",
-        "quote":"Simplicity is the soul of efficiency."
+        "author": "Austin Freeman",
+        "quote": "Simplicity is the soul of efficiency."
     },
     {
-        "author":"Ron Jeffries",
-        "quote":"Code never lies, comments sometime do."
+        "author": "Ron Jeffries",
+        "quote": "Code never lies, comments sometime do."
     },
     {
-        "author":"Harold Abelson",
-        "quote":"Programs must be written for people to read, and only the incidentally for machines to execute."
-    }, 
-     {
-        "author":"Doug Linder",
-        "quote":"A good programmer is someone who looks both ways before crossing a onw-way street."
+        "author": "Harold Abelson",
+        "quote": "Programs must be written for people to read, and only the incidentally for machines to execute."
+    },
+    {
+        "author": "Doug Linder",
+        "quote": "A good programmer is someone who looks both ways before crossing a onw-way street."
+    },
+    {
+        "author": "Donald Knuth",
+        "quote": "Premature optimization is the root of all evil."
+    },
+    {
+        "author": "Grace Hopper",
+        "quote": "The most dangerous phrase in the language is, 'We've always done it this way.'"
+    },
+    {
+        "author": "Dennis Ritchie",
+        "quote": "UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity."
+    },
+    {
+        "author": "Brian Kernighan",
+        "quote": "Debugging is twice as hard as writing the code in the first place."
+    },
+    {
+        "author": "Bjarne Stroustrup",
+        "quote": "C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off."
+    },
+    {
+        "author": "Robert C. Martin",
+        "quote": "Clean code always looks like it was written by someone who cares."
+    },
+    {
+        "author": "Ken Thompson",
+        "quote": "One of my most productive days was throwing away 1000 lines of code."
+    },
+    {
+        "author": "Steve Jobs",
+        "quote": "Everybody in this country should learn to program a computer... because it teaches you how to think."
+    },
+    {
+        "author": "Ada Lovelace",
+        "quote": "That brain of mine is something more than merely mortal, as time will show."
     }
-
-    
 ]
