@@ -153,8 +153,9 @@ img {
     }
 
     nav {
-        width: auto;
-        height: 8vh;
+        width: 100vw;
+        width: fit-content;
+        height: 10vh;
     }
 
     .quoteContainer {
@@ -200,7 +201,7 @@ img {
 }
     nav {
         width: 100vw;
-        height: 8vh;
+        height: 10vh;
     }
 
     .quoteContainer {
