@@ -13,7 +13,9 @@ const Navbar = () => {
         <li> <a href={"/religious"} className='links'>Religious quotes</a> </li>
         <li> <a href={"/modern"} className='links'>Modern quotes</a> </li>
         <li> <a href={"/coders"} className='links'>Coders quotes</a> </li>
-          <li> <a href={"/my-portfolio"} className='links'>Dev's portfolio</a> </li>
+         
+          <li> <a href="/CustomQuotes" className='links'>People quotes</a> </li>
+           <li> <a href={"/my-portfolio"} className='links'>Dev's portfolio</a> </li>
        
 
     </ul>

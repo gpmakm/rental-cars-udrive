@@ -8,7 +8,7 @@ const Footer = () => {
 
         Follow developer on : <br />
         <div>
-           <a href="https://www.instagram.com/the_dev_page/?__pwa=1"> <Image src={instagramLogo} id='socialmedia'/> - the_dev_page</a>
+           <a href="https://www.instagram.com/the_dev_page/?__pwa=1"> <Image src={instagramLogo} id='socialmedia' alt='Instagram - the_dev_page'/> - the_dev_page</a>
            
         </div>
 
