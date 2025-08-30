@@ -14,7 +14,7 @@ const page = () => {
 
   
     <div className="container">
-      <p style={{fontFamily:'cursive',width:300
+      <p style={{width:300
       ,margin:5,border:'1px solid grey',borderRadius:28,padding:15}}>
         Welcome to our website. The one platform to provide you free and sharable quotes of multiple categories like modern, religious, coders and more. If you are feeling demotivated, tired from the tensions of the physical world or need any quote for your status updates get all kinds of them here. 
         <a href='#uploadQuote'>Post your custom quote</a>

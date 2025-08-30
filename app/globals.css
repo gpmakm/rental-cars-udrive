@@ -167,8 +167,16 @@ img {
     width: 4vw;
     height: 6vh;
 }
-
+.linkIcon{
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    border: 2px solid white;
+}
 @media screen and (max-width:400px) {
+    *{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
     body{
         width: 100vw;
         height: 100vh;
