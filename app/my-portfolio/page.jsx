@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div style={styles.container}>
+    <div style={styles.container} id="portfolio">
       <header style={styles.header}>
         <h1 style={styles.heading}>Akarsh Kumar Mishra</h1>
         <p style={styles.subHeading}>Full-Stack Developer | Android Developer | Ethical Hacking Enthusiast</p>

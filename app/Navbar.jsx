@@ -14,18 +14,18 @@ const Navbar = () => {
    <nav>
     <span id="nav">SuktiSutram</span>
     <ul>
-        <li><a href={"/"} className="links"><Image src={homepic} className={'linkIcon'} width={5} height={5} alt='Home'/></a>
+        <li><a href={"/"} className="links"><Image src={homepic} className={'linkIcon'} quality={100} width={5} height={5} alt='Home'/></a>
         
         </li>
-        <li> <a href={"/religious"} className='links'><Image src={religious} className={'linkIcon'} width={5} height={5} alt='Religious'/></a> </li>
+        <li> <a href={"/religious"} className='links'><Image src={religious} className={'linkIcon'} quality={100} objectFit='contain' width={5} height={5} alt='Religious'/></a> </li>
 
-        <li> <a href={"/modern"} className='links'><Image src={scientist} width={5} className={'linkIcon'} height={5} alt='Scientist'/></a> </li>
+        <li> <a href={"/modern"} className='links'><Image src={scientist} width={5} className={'linkIcon'} quality={100} height={5} alt='Scientist'/></a> </li>
 
-        <li> <a href={"/coders"} className='links'><Image src={cimage} width={5} className={'linkIcon'} height={5} alt='Home'/></a> </li>
+        <li> <a href={"/coders"} className='links'><Image src={cimage} width={5} className={'linkIcon'} quality={100} height={5} alt='Home'/></a> </li>
          
-          <li> <a href="/CustomQuotes" className='links'><Image src={people} className={'linkIcon'} width={5} height={5} alt='Home'/></a> </li>
+          <li> <a href="/CustomQuotes" className='links'><Image src={people} className={'linkIcon'} quality={100} width={5} height={5} alt='Home'/></a> </li>
 
-           <li> <a href={"/my-portfolio"} className='links'><Image src={portfolio} width={5} className={'linkIcon'} height={5} alt='Home'/></a> </li>
+           <li> <a href={"/my-portfolio"} className='links'><Image src={portfolio} width={5} quality={100} className={'linkIcon'} height={5} alt='Home'/></a> </li>
        
 
     </ul>
