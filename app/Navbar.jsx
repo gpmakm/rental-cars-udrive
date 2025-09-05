@@ -2,12 +2,12 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
 //import home from './UdriveImages/icons8-home.gif'
-import homepic from '../public/home.png'
-import religious from '../public/religious-quotes.jpeg'
-import scientist from '../public/6633.jpg'
-import portfolio from '../public/portfolio.jpeg'
-import cimage from '../public/coders-quotes.jpeg'
-import people from '../public/user.png'
+import homepic from '../public/home.svg'
+import religious from '../public/religious-quotes.svg'
+import scientist from '../public/6633.svg'
+import portfolio from '../public/portfolio.svg'
+import cimage from '../public/coders-quotes.svg'
+import people from '../public/user.svg'
 const Navbar = () => {
   return (
     
