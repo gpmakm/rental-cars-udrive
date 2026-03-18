@@ -25,6 +25,13 @@ li {
 
 }
 
+.links {
+    background-color: green;
+    border: 2px solid white;
+    padding: 8px;
+    border-radius: 25px 5px 25px 5px;
+}
+
 a {
     text-decoration: none;
 }
@@ -49,10 +56,10 @@ body {
     justify-content: center;
     align-items: center;
     align-self: center;
-      position: relative;
-        z-index: 5;
-        margin-top: 15vh;
-    
+    position: relative;
+    z-index: 5;
+    margin-top: 15vh;
+
 }
 
 .religiousCard {
@@ -66,7 +73,7 @@ body {
     margin: 7px;
     background-color: rgb(81, 6, 151);
     color: white;
-    font-family:  Gill Sans ,  Gill Sans MT , Calibri,  Trebuchet MS , sans-serif;
+    font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
 }
 
 
@@ -81,7 +88,7 @@ body {
     margin: 7px;
     background-color: rgb(190, 12, 42);
     color: white;
-    font-family:  Gill Sans ,  Gill Sans MT , Calibri,  Trebuchet MS , sans-serif;
+    font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
 }
 
 .codersQuotes {
@@ -95,14 +102,15 @@ body {
     margin: 7px;
     background-color: rgb(160, 5, 160);
     color: white;
-    font-family:  Gill Sans ,  Gill Sans MT , Calibri,  Trebuchet MS , sans-serif;
+    font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
 }
 
 .author {
     text-align: right;
     font-size: smaller;
 }
-form{
+
+form {
     width: 65vw;
     height: auto;
     border: 1px solid rgb(153, 64, 236);
@@ -113,19 +121,22 @@ form{
     margin: 5px;
     padding: 8px;
 }
-form .field{
+
+form .field {
     width: 60vw;
     height: 6vh;
     padding: 7px;
     gap: 5px;
     margin: 8px;
 }
-.field input{
+
+.field input {
 
     width: 58vw;
     height: 6vh;
     padding: 5px;
 }
+
 button {
     background-color: green;
     color: white;
@@ -136,10 +147,12 @@ button {
     margin-top: 8px;
     border-radius: 25px 5px 25px 5px;
 }
-span{
+
+span {
     font-size: x-large;
     margin-left: 5px;
 }
+
 img {
     width: 30vw;
     height: 35vh;
@@ -147,13 +160,13 @@ img {
 
 .container {
     display: flex;
-     flex-direction:column;
-      justify-content:center;
-       align-items:center;
-        align-self:center;
-          position: relative;
-        z-index: 5;
-        margin-top: 15vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    z-index: 5;
+    margin-top: 15vh;
 }
 
 .homeContainer {
@@ -182,7 +195,8 @@ img {
     width: 4vw;
     height: 6vh;
 }
-.linkIcon{
+
+.linkIcon {
     width: 35px;
     background-color: orange;
     height: 35px;
@@ -193,20 +207,29 @@ img {
     border-left: 1px solid white;
     border-right: 1px solid white;
 }
+
 @media screen and (max-width:400px) {
-    *{
+    * {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-    body{
+
+    body {
         width: 100vw;
         height: 100vh;
         position: absolute;
     }
-    .linkIcon{
+
+    .linkIcon {
         padding: 1px;
         width: 35px;
         height: 30px;
-        
+
+    }
+    .links{
+        height: 5vh;
+        width: 4vw;
+        margin: 0;
+        padding: 0;
     }
 
     .religiousCard,
@@ -217,8 +240,8 @@ img {
     }
 
     nav {
-       display: flex;
-       flex-direction: column;
+        display: flex;
+        flex-direction: column;
         width: 100vw;
         position: fixed;
         height: 15vh;
@@ -227,48 +250,55 @@ img {
         opacity: 1;
         z-index: 1000;
         /* overflow-y: scroll; */
-        
+
     }
-li{
-    gap: 2px;margin: 2px;
-}
+
+    li {
+        gap: 2px;
+        margin: 2px;
+    }
+
     .quoteContainer {
         padding: 0px;
         margin-top: 15vh;
         z-index: 5;
         position: relative;
     }
-    #portfolio{
-         margin-top: 15vh;
+
+    #portfolio {
+        margin-top: 15vh;
         z-index: 5;
         position: relative;
     }
-ul{
-    margin: 2px;
-}
+
+    ul {
+        margin: 2px;
+    }
+
     img {
         width: 200px;
         height: 100px;
     }
 
     .container {
-    display: flex;
-     flex-direction:column;
-      justify-content:center;
-       align-items:center;
-        align-self:center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
         width: 70vw;
         position: relative;
         z-index: 5;
         margin-top: 15vh;
-}
+    }
 
     .religiousquote {
         width: 50vw;
         height: auto;
         padding: 9px;
     }
-    #socialmedia{
+
+    #socialmedia {
         width: 25px;
         height: 25px;
     }
@@ -282,22 +312,33 @@ ul{
         width: 60vw;
 
     }
-    .religiousquote{
+
+    .religiousquote {
         width: 50vw;
     }
-.container {
-    width: 70vw;
-    display:  flex ;
-     flex-direction: column ;
-      justify-content: center ;
-       align-items: center ;
-        align-self: center ;
-}
+
+    .container {
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .links{
+        margin: 3;
+        padding: 0;
+        width: auto;
+        height: 3vh;
+        border: 0;
+        font-size: 110%;
+    }
+
     nav {
         width: 100vw;
         height: 7vh;
         font-size: small;
-        
+
     }
 
     .quoteContainer {
@@ -320,12 +361,16 @@ ul{
         height: auto;
         padding: 9px;
     }
-     #socialmedia{
+
+    #socialmedia {
         width: 25px;
         height: 25px;
     }
-    li{
+
+    li {
         margin: 2px;
         font-size: smaller;
     }
+
+    
 }
