@@ -6,7 +6,7 @@
 nav {
     width: 100vw;
     height: 8vh;
-    background-color: orange;
+    background-color: orangered;
     color: white;
     position: fixed;
     z-index: 1000;
@@ -29,7 +29,7 @@ li {
     background-color: green;
     border: 2px solid white;
     padding: 8px;
-    border-radius: 25px 5px 25px 5px;
+    border-radius: 35px 8px 35px 8px;
 }
 
 a {
@@ -138,11 +138,11 @@ form .field {
 }
 
 button {
-    background-color: green;
+    background-color: darkred;
     color: white;
     padding: 5px;
     border-radius: 1px;
-    border: 2px solid green;
+    border: 2px solid darkred;
     cursor: pointer;
     margin-top: 8px;
     border-radius: 25px 5px 25px 5px;
