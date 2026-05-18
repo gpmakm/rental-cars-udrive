@@ -130,6 +130,11 @@ form .field {
     margin: 8px;
 }
 
+.like{
+    border: 2px solid white;
+    border-radius: 25px 5px 5px 25px;
+}
+
 .field input {
 
     width: 58vw;

@@ -10,6 +10,9 @@ const CustomQuote = () => {
                     <div key={index} className='modernCard'>
                         <p>{quote.quote}</p>
                         <p className='author'> by {quote.author}</p>
+                        <div>
+                            <button className='like'>Like</button><button className='comment'>Cooment</button>
+                        </div>
                         <a style={{
                             backgroundColor:'green',
                             color:'white',
