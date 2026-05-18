@@ -23,7 +23,7 @@ const Navbar = () => {
 
         <li> <a href={"/coders"} className='links'>Quotes for coders</a> </li>
          
-          <li> <a href="/CustomQuotes" className='links'>Post your quotes</a></li>
+          <li> <a href="#uploadQuote" className='links'>Post your quotes</a></li>
 
            <li> <a href={"/my-portfolio"} className='links'>Developer portfolio</a></li>
        

@@ -5,6 +5,7 @@ import Form from './Components/Form';
 import geetaPic from '../public/geetaPic.jpg'
 import quranPic from '../public/quranPic.jpg'
 import biblePic from '../public/biblePic.jpg'
+import CustomQuote from './CustomQuotes/page';
 
 const page = () => {
 
@@ -14,6 +15,10 @@ const page = () => {
 
   
     <div className="container">
+<div className=''>
+  <CustomQuote/>
+</div>
+
       <p style={{width:300
       ,margin:5,border:'1px solid grey',borderRadius:28,padding:15}}>
         Welcome to our website. The one platform to provide you free and sharable quotes of multiple categories like modern, religious, coders and more. If you are feeling demotivated, tired from the tensions of the physical world or need any quote for your status updates get all kinds of them here. 
