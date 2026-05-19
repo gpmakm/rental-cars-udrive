@@ -11,7 +11,7 @@ const CustomQuote = () => {
                         <p>{quote.quote}</p>
                         <p className='author'> by {quote.author}</p>
                         <div>
-                            <button className='like'>Like</button><button className='comment'>Cooment</button>
+                            <button className='like'>Like</button><button className='comment'>Comment</button>
                         </div>
                         <a style={{
                             backgroundColor:'green',
