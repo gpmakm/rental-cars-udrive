@@ -1,7 +1,15 @@
-import React from 'react'
+"use client"
+
+import {React,useState} from 'react'
 import customquote from '../../public/CustomQuotes.json'
 const CustomQuote = () => {
+    const [like, setLike] = useState();
+    const [count,setCount] = useState(0);
     const link="https://wa.me/?text="
+    const updateVal=()=>{
+        setLike(!like);
+        setCount(like?count-1:count+1);
+    }
   return (
     <div className='quoteContainer'>
         {
@@ -11,7 +19,10 @@ const CustomQuote = () => {
                         <p>{quote.quote}</p>
                         <p className='author'> by {quote.author}</p>
                         <div>
-                            <button className='like'>Like</button><button className='comment'>Comment</button>
+                            <button className='like' onClick={updateVal}>
+                                {like ? 'Unlike' : `Like`} {count}
+                            </button>
+                            <button className='comment'>Comment</button>
                         </div>
                         <a style={{
                             backgroundColor:'green',
