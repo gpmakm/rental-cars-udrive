@@ -3,11 +3,21 @@
 import {React,useState} from 'react'
 import customquote from '../../public/CustomQuotes.json'
 const CustomQuote = () => {
-    const [like, setLike] = useState();
+    const [like, setLike] = useState(true);
     const [count,setCount] = useState(0);
     const link="https://wa.me/?text="
     const updateVal=()=>{
-        setCount(count+1);
+            if (like==true) {
+                setCount(count+1);
+                setLike(false)
+            }
+            
+            setCount(0)
+            
+           
+       
+        
+
     }
   return (
     <div className='quoteContainer'>
