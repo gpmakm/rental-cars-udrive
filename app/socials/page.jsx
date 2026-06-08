@@ -10,6 +10,9 @@ const page = () => {
             <input type="file" placeholder="Upload your day" />
             <button type="submit">Submit</button>
         </form>
+        <div className="quoteContainer">
+            {/* Display uploaded files or other content */}
+        </div>
     </div>
   )
 }
