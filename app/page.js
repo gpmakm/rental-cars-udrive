@@ -6,7 +6,7 @@ import geetaPic from '../public/geetaPic.jpg'
 import quranPic from '../public/quranPic.jpg'
 import biblePic from '../public/biblePic.jpg'
 import CustomQuote from './CustomQuotes/page';
-
+import Testre from './testre';
 const page = () => {
 
   return (
@@ -41,6 +41,7 @@ const page = () => {
       <div id='uploadQuote'>
         <Form buttonTitle="Post my quote"/>
       </div>
+      <Testre/>
      </div>
  
 
