@@ -23,7 +23,7 @@ export async function POST(req) {
     try {
         let new_registration = new User({ name: name, email: email, phone: phone, passw: password });
         await new_registration.save();
-        return NextResponse.json({ message: "User registered successfully" });
+        return NextResponse.json({ message: "User registered successfully for test" });
     } catch (e) {
         return NextResponse.json({ message: `Error in registering user ${e}` });
     }
