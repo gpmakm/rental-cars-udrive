@@ -1,6 +1,14 @@
-import React from 'react'
+"use client"
+
+import {React,useState} from 'react'
 
 const Frame = () => {
+  const [likes, setLikes] = useState(0)
+
+  const handleLike = () => {
+    setLikes(likes + 1)
+  }
+
   return (
     <div>
         <div>
