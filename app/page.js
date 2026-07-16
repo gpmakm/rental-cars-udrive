@@ -15,6 +15,11 @@ const page = () => {
 
   
     <div className="container">
+      <div style={{borderBottom: '1px solid grey',marginBottom:10}}>
+         <div id='uploadQuote'>
+        <Form buttonTitle="Post my quote"/>
+      </div>
+        </div>
 <div className=''>
   <CustomQuote/>
 </div>
@@ -38,9 +43,7 @@ const page = () => {
  <p>Be kind so that God be kind on you.</p>
        </div>
       </div>
-      <div id='uploadQuote'>
-        <Form buttonTitle="Post my quote"/>
-      </div>
+     
       
      </div>
  
