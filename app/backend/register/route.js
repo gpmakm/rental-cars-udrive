@@ -14,8 +14,30 @@ let dataschema = new mongoose.Schema({
     phone: Number,
     passw: String
 })
+const orderSchema = new mongoose.Schema({
+    name: String,
+    phone: String,
+
+    order: [
+        {
+            name: String,
+            price: Number,
+            unit: String,
+            qty: Number
+        }
+    ],
+
+    total: Number,
+
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+});
 
 let User = new mongoose.model('User', dataschema);
+let Order=new mongoose.model('Order',orderSchema);
+module.exports={Order};
 
 export async function POST(req) {
     let { name, email, password, phone } = await req.json();
