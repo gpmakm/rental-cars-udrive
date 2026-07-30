@@ -34,7 +34,7 @@ export async function POST(req) {
         return NextResponse.json(
             {
                 success: true,
-                message: "Order placed successfully"
+                message: "Order placed successfully!!"
             },
             { status: 201 }
         );
