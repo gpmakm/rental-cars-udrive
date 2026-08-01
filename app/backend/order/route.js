@@ -1,5 +1,5 @@
 //import {NextResponse} from 'next/server'
- import Order from '../register/route'
+ //import Order from '../register/route'
 
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
@@ -13,6 +13,34 @@ async function connectDB() {
     }
 }
 
+const orderSchema = new mongoose.Schema({
+    name: String,
+    phone: String,
+
+    order: [
+        {
+            name: String,
+            price: Number,
+            unit: String,
+            qty: Number
+        }
+    ],
+
+    total: Number,
+
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+});
+
+// const User =
+//     mongoose.models.User ||
+//     mongoose.model("User", dataschema);
+
+const Order =
+    mongoose.models.Order ||
+    mongoose.model("Order", orderSchema);
 
 export async function POST(req) {
 

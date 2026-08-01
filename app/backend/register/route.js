@@ -43,7 +43,7 @@ const Order =
     mongoose.models.Order ||
     mongoose.model("Order", orderSchema);
 
-module.exports = Order;
+//module.exports = Order;
 
 export async function POST(req) {
     let { name, email, password, phone } = await req.json();
