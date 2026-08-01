@@ -37,7 +37,7 @@ const orderSchema = new mongoose.Schema({
 
 let User = new mongoose.model('User', dataschema);
 let Order=new mongoose.model('Order',orderSchema);
-module.exports={Order};
+export default Order;
 
 export async function POST(req) {
     let { name, email, password, phone } = await req.json();
