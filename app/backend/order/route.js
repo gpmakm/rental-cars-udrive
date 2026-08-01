@@ -4,12 +4,12 @@ import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 
 async function connectDB() {
-    try {
-        await mongoose.connect(process.env.DATABASE_LINK);
-        console.log("Connected to db");
-    } catch (e) {
-        console.error(`Error in connecting to db ${e}`);
-    }
+
+    if (mongoose.connection.readyState >= 1)
+        return;
+
+    await mongoose.connect(process.env.DATABASE_LINK);
+
 }
 
 const orderSchema = new mongoose.Schema({
