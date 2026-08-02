@@ -1,6 +1,6 @@
 import React from "react";
 
-const page = () => {
+const Portfolio = () => {
   return (
     <div style={styles.container} id="portfolio">
       <header style={styles.header}>
@@ -152,4 +152,4 @@ const styles = {
   }
 };
 
-export default page;
+export default Portfolio;

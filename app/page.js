@@ -5,7 +5,7 @@ import Form from './Components/Form';
 import geetaPic from '../public/geetaPic.jpg'
 import quranPic from '../public/quranPic.jpg'
 import biblePic from '../public/biblePic.jpg'
-import CustomQuote from './CustomQuotes/page';
+import CustomQuote from './CustomQuotes/Custom';
 
 const page = () => {
 

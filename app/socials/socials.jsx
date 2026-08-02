@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+const Socials = () => {
   return (
     <div>
         <form onSubmit={(e) => {
@@ -17,4 +17,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Socials
