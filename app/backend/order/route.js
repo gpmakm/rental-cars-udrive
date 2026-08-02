@@ -1,5 +1,5 @@
 
-
+"use server"
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 
@@ -40,7 +40,16 @@ const orderSchema = new mongoose.Schema({
 const Order =
     mongoose.models.Order ||
     mongoose.model("Order", orderSchema);
-
+export async function OPTIONS() {
+    return new NextResponse(null, {
+        status: 200,
+        headers: {
+            "Access-Control-Allow-Origin": "http://localhost",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type"
+        }
+    });
+}
 export async function POST(req) {
 
     await connectDB();
@@ -61,9 +70,16 @@ export async function POST(req) {
         return NextResponse.json(
             {
                 success: true,
-                message: "Order placed !!"
+                message: "Order saved, proceed to payment!!"
+               // order:newOrder
             },
-            { status: 201 }
+            { status: 201,
+                headers: {
+                     "Access-Control-Allow-Origin": "http://localhost",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type"
+                }
+             }
         );
 
     } catch (err) {
