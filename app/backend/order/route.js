@@ -110,7 +110,7 @@ export async function POST(req) {
             },
             { status: 201,
                 headers: {
-                     "Access-Control-Allow-Origin": "http://localhost",
+                     "Access-Control-Allow-Origin": "https://payal-fruits.in",
             "Access-Control-Allow-Methods": "POST, OPTIONS",
             "Access-Control-Allow-Headers": "Content-Type"
                 }
