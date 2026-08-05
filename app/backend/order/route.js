@@ -1,8 +1,18 @@
 
 // "use server"
+import nodemailer from 'nodemailer'
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
-
+import dotenv from "dotenv";
+dotenv.config();
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // SMTP host, // Use Gmail or any other service
+  
+  auth: {
+    user: process.env.SENDER_EMAIL, // Your email address
+    pass: process.env.SENDER_PASSWORD, // Your email password or app-specific password
+  },
+});
 async function connectDB() {
 
     if (mongoose.connection.readyState >= 1)
@@ -66,6 +76,31 @@ export async function POST(req) {
         });
 
         await newOrder.save();
+        const emailSubject = 'Fruits order';
+    const emailText = `
+      Hello Boss!! Another fruits order
+      
+      ${name},
+      :
+      - Phone: ${phone}
+      - Order: ${JSON.stringify(order)}
+      - Total: ${total}
+    `;
+
+    // Send email
+    const mailOptions = {
+      from:"esikshatutorialsakarsh@gmail.com" , // Sender address
+      to: " admin@payal-fruits.in", // Recipient address
+      subject: emailSubject, // Email subject
+      text: emailText, // Email body (plain text)
+    };
+      
+    
+
+   
+
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent:', info.response);
 
         return NextResponse.json(
             {
