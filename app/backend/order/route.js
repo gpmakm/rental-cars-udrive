@@ -4,6 +4,7 @@ import nodemailer from 'nodemailer'
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import { OrderedBulkOperation } from 'mongodb';
 dotenv.config();
 const transporter = nodemailer.createTransport({
     service: 'gmail', // SMTP host, // Use Gmail or any other service
@@ -127,7 +128,8 @@ export async function POST(req) {
         return NextResponse.json(
             {
                 success: true,
-                message: "Order saved, proceed to payment!!"
+                message: "Order saved, proceed to payment!!",
+                order:newOrder
                 
             },
             {
