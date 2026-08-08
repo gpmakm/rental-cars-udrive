@@ -60,6 +60,20 @@ export async function OPTIONS() {
         }
     });
 }
+
+export async function GET(req){
+    try{
+await connectDB();
+    const resp=await Order.find({});
+    } catch(err){
+        return NextResponse.json({
+
+        })
+    }
+    
+
+}
+
 export async function POST(req) {
 
     await connectDB();
@@ -67,19 +81,18 @@ export async function POST(req) {
     try {
 
         const { name, phone, order, total } = await req.json();
-        console.log("Got post request with data:", { name, phone, order, total });
+    /*    console.log("Got post request with data:", { name, phone,order, total });*/
         const newOrder = new Order({
             name,
             phone,
             order,
             total
         });
-        console.log(process.env.SENDER_EMAIL, // Your email address
-            process.env.SENDER_PASSWORD);
+        
 
 
         await newOrder.save();
-        console.log("Saved order")
+        //console.log("Saved order")
         const emailSubject = 'Fruits order';
         const emailText = `
       Hello Boss!! Another fruits order
@@ -104,7 +117,7 @@ export async function POST(req) {
 
         try {
             const info = await transporter.sendMail(mailOptions);
-            console.log("Sent mail")
+            //console.log("Sent mail")
         }
         catch (err) {
             console.error(err)
