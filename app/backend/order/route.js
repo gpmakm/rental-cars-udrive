@@ -67,13 +67,16 @@ export async function POST(req) {
     try {
 
         const { name, phone, order, total } = await req.json();
-
+        console.log("Got post request with data:", { name, phone, order, total });
         const newOrder = new Order({
             name,
             phone,
             order,
             total
         });
+        console.log( process.env.SENDER_EMAIL, // Your email address
+     process.env.SENDER_PASSWORD);
+        
 
         await newOrder.save();
         const emailSubject = 'Fruits order';
@@ -89,8 +92,8 @@ export async function POST(req) {
 
     // Send email
     const mailOptions = {
-      from:"esikshatutorialsakarsh@gmail.com" , // Sender address
-      to: " admin@payal-fruits.in", // Recipient address
+      from: process.env.SENDER_EMAIL, // Sender address
+      to: "admin@payal-fruits.in", // Recipient address
       subject: emailSubject, // Email subject
       text: emailText, // Email body (plain text)
     };
@@ -98,9 +101,13 @@ export async function POST(req) {
     
 
    
-
+try{
     const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info.response);
+}
+catch(err){
+    console.error(err)
+}
+    
 
         return NextResponse.json(
             {
@@ -109,12 +116,12 @@ export async function POST(req) {
                // order:newOrder
             },
             { status: 201,
-                headers: {
-                     "Access-Control-Allow-Origin": "https://payal-fruits.in",
+                 headers: {
+            "Access-Control-Allow-Origin": "https://payal-fruits.in",
             "Access-Control-Allow-Methods": "POST, OPTIONS",
             "Access-Control-Allow-Headers": "Content-Type"
-                }
-             }
+        }
+    }
         );
 
     } catch (err) {
