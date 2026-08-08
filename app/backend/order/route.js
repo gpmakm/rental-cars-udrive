@@ -6,12 +6,12 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // SMTP host, // Use Gmail or any other service
-  
-  auth: {
-    user: process.env.SENDER_EMAIL, // Your email address
-    pass: process.env.SENDER_PASSWORD, // Your email password or app-specific password
-  },
+    service: 'gmail', // SMTP host, // Use Gmail or any other service
+
+    auth: {
+        user: process.env.SENDER_EMAIL, // Your email address
+        pass: process.env.SENDER_PASSWORD, // Your email password or app-specific password
+    },
 });
 async function connectDB() {
 
@@ -74,13 +74,14 @@ export async function POST(req) {
             order,
             total
         });
-        console.log( process.env.SENDER_EMAIL, // Your email address
-     process.env.SENDER_PASSWORD);
-        
+        console.log(process.env.SENDER_EMAIL, // Your email address
+            process.env.SENDER_PASSWORD);
+
 
         await newOrder.save();
+        console.log("Saved order")
         const emailSubject = 'Fruits order';
-    const emailText = `
+        const emailText = `
       Hello Boss!! Another fruits order
       
       ${name},
@@ -90,38 +91,40 @@ export async function POST(req) {
       - Total: ${total}
     `;
 
-    // Send email
-    const mailOptions = {
-      from: process.env.SENDER_EMAIL, // Sender address
-      to: "admin@payal-fruits.in", // Recipient address
-      subject: emailSubject, // Email subject
-      text: emailText, // Email body (plain text)
-    };
-      
-    
+        // Send email
+        const mailOptions = {
+            from: process.env.SENDER_EMAIL, // Sender address
+            to: "admin@payal-fruits.in", // Recipient address
+            subject: emailSubject, // Email subject
+            text: emailText, // Email body (plain text)
+        };
 
-   
-try{
-    const info = await transporter.sendMail(mailOptions);
-}
-catch(err){
-    console.error(err)
-}
-    
+
+
+
+        try {
+            const info = await transporter.sendMail(mailOptions);
+            console.log("Sent mail")
+        }
+        catch (err) {
+            console.error(err)
+        }
+
 
         return NextResponse.json(
             {
                 success: true,
                 message: "Order saved, proceed to payment!!"
-               // order:newOrder
+                // order:newOrder
             },
-            { status: 201,
-                 headers: {
-            "Access-Control-Allow-Origin": "https://payal-fruits.in",
-            "Access-Control-Allow-Methods": "POST, OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type"
-        }
-    }
+            {
+                status: 201,
+                headers: {
+                    "Access-Control-Allow-Origin": "https://payal-fruits.in",
+                    "Access-Control-Allow-Methods": "POST, OPTIONS",
+                    "Access-Control-Allow-Headers": "Content-Type"
+                }
+            }
         );
 
     } catch (err) {
