@@ -116,7 +116,7 @@ export async function POST(req) {
 
 
         try {
-            const info = await transporter.sendMail(mailOptions);
+            await transporter.sendMail(mailOptions);
             //console.log("Sent mail")
         }
         catch (err) {
@@ -128,7 +128,7 @@ export async function POST(req) {
             {
                 success: true,
                 message: "Order saved, proceed to payment!!"
-                // order:newOrder
+                
             },
             {
                 status: 201,
