@@ -62,16 +62,16 @@ export async function OPTIONS() {
     });
 }
 
-export async function GET(req){
-    try{
-await connectDB();
-    const resp=await Order.find({});
-    } catch(err){
+export async function GET(req) {
+    try {
+        await connectDB();
+        const resp = await Order.find({});
+    } catch (err) {
         return NextResponse.json({
 
         })
     }
-    
+
 
 }
 
@@ -82,14 +82,14 @@ export async function POST(req) {
     try {
 
         const { name, phone, order, total } = await req.json();
-    /*    console.log("Got post request with data:", { name, phone,order, total });*/
+        /*    console.log("Got post request with data:", { name, phone,order, total });*/
         const newOrder = new Order({
             name,
             phone,
             order,
             total
         });
-        
+
 
 
         await newOrder.save();
@@ -107,10 +107,74 @@ export async function POST(req) {
 
         // Send email
         const mailOptions = {
-            from: process.env.SENDER_EMAIL, // Sender address
-            to: "admin@payal-fruits.in", // Recipient address
-            subject: emailSubject, // Email subject
-            text: emailText, // Email body (plain text)
+            from: process.env.SENDER_EMAIL,
+            to: "admin@payal-fruits.in",
+            subject: `🍎 New Order from ${name}`,
+
+            text: `
+New Payal Fruits Order
+
+Customer: ${name}
+Phone: ${phone}
+
+${order.map(item =>
+                `${item.name} - ${item.qty} ${item.unit} - ₹${item.price} - ₹${item.price * item.qty}`
+            ).join("\n")}
+
+Total: ₹${total}
+    `,
+
+            html: `
+        <div style="font-family: Arial, sans-serif; max-width: 650px; margin: auto;">
+
+            <h2 style="color:#ff7043;">
+                🍎 Payal Fruits - New Order
+            </h2>
+
+            <hr>
+
+            <h3>Customer Details</h3>
+
+            <p>
+                <strong>Name:</strong> ${name}<br>
+                <strong>Phone:</strong> ${phone}
+            </p>
+
+            <h3>Order Details</h3>
+
+            <table style="
+                width:100%;
+                border-collapse:collapse;
+                margin-top:10px;
+            ">
+
+                <thead>
+                    <tr style="background:#ff7043;color:white;">
+                        <th style="padding:10px;text-align:left;">Item</th>
+                        <th style="padding:10px;">Quantity</th>
+                        <th style="padding:10px;">Price</th>
+                        <th style="padding:10px;">Subtotal</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    ${orderRows}
+                </tbody>
+
+            </table>
+
+            <hr>
+
+            <h2 style="text-align:right;">
+                Total: ₹${total}
+            </h2>
+
+            <p style="color:#666;">
+                Please process this order.
+            </p>
+
+        </div>
+    `
         };
 
 
@@ -129,8 +193,8 @@ export async function POST(req) {
             {
                 success: true,
                 message: "Order saved, proceed to payment!!",
-                order:newOrder
-                
+                order: newOrder
+
             },
             {
                 status: 201,
