@@ -95,15 +95,15 @@ export async function POST(req) {
         await newOrder.save();
         //console.log("Saved order")
         const emailSubject = 'Fruits order';
-        const emailText = `
-      Hello Boss!! Another fruits order
+    //     const emailText = `
+    //   Hello Boss!! Another fruits order
       
-      ${name},
-      :
-      - Phone: ${phone}
-      - Order: ${JSON.stringify(order)}
-      - Total: ${total}
-    `;
+    //   ${name},
+    //   :
+    //   - Phone: ${phone}
+    //   - Order: ${JSON.stringify(order)}
+    //   - Total: ${total}
+    // `;
 
         // Send email
         const mailOptions = {
