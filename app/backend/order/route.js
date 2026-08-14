@@ -95,15 +95,15 @@ export async function POST(req) {
         await newOrder.save();
         //console.log("Saved order")
         const emailSubject = 'Fruits order';
-    //     const emailText = `
-    //   Hello Boss!! Another fruits order
+        const emailText = `
+      Hello Boss!! Another fruits order
       
-    //   ${name},
-    //   :
-    //   - Phone: ${phone}
-    //   - Order: ${JSON.stringify(order)}
-    //   - Total: ${total}
-    // `;
+      ${name},
+      :
+      - Phone: ${phone}
+      - Order: ${JSON.stringify(order)}
+      - Total: ${total}
+    `;
 
         // Send email
         const mailOptions = {
@@ -111,70 +111,70 @@ export async function POST(req) {
             to: "admin@payal-fruits.in",
             subject: `🍎 New Order from ${name}`,
 
-            text: `
-New Payal Fruits Order
+             text: emailText
+// New Payal Fruits Order
 
-Customer: ${name}
-Phone: ${phone}
+// Customer: ${name}
+// Phone: ${phone}
 
-${order.map(item =>
-                `${item.name} - ${item.qty} ${item.unit} - ₹${item.price} - ₹${item.price * item.qty}`
-            ).join("\n")}
+// ${order.map(item =>
+//                 `${item.name} - ${item.qty} ${item.unit} - ₹${item.price} - ₹${item.price * item.qty}`
+//             ).join("\n")}
 
-Total: ₹${total}
-    `,
+// Total: ₹${total}
+//     `,
 
-            html: `
-        <div style="font-family: Arial, sans-serif; max-width: 650px; margin: auto;">
+//             html: `
+//         <div style="font-family: Arial, sans-serif; max-width: 650px; margin: auto;">
 
-            <h2 style="color:#ff7043;">
-                🍎 Payal Fruits - New Order
-            </h2>
+//             <h2 style="color:#ff7043;">
+//                 🍎 Payal Fruits - New Order
+//             </h2>
 
-            <hr>
+//             <hr>
 
-            <h3>Customer Details</h3>
+//             <h3>Customer Details</h3>
 
-            <p>
-                <strong>Name:</strong> ${name}<br>
-                <strong>Phone:</strong> ${phone}
-            </p>
+//             <p>
+//                 <strong>Name:</strong> ${name}<br>
+//                 <strong>Phone:</strong> ${phone}
+//             </p>
 
-            <h3>Order Details</h3>
+//             <h3>Order Details</h3>
 
-            <table style="
-                width:100%;
-                border-collapse:collapse;
-                margin-top:10px;
-            ">
+//             <table style="
+//                 width:100%;
+//                 border-collapse:collapse;
+//                 margin-top:10px;
+//             ">
 
-                <thead>
-                    <tr style="background:#ff7043;color:white;">
-                        <th style="padding:10px;text-align:left;">Item</th>
-                        <th style="padding:10px;">Quantity</th>
-                        <th style="padding:10px;">Price</th>
-                        <th style="padding:10px;">Subtotal</th>
-                    </tr>
-                </thead>
+//                 <thead>
+//                     <tr style="background:#ff7043;color:white;">
+//                         <th style="padding:10px;text-align:left;">Item</th>
+//                         <th style="padding:10px;">Quantity</th>
+//                         <th style="padding:10px;">Price</th>
+//                         <th style="padding:10px;">Subtotal</th>
+//                     </tr>
+//                 </thead>
 
-                <tbody>
-                    ${orderRows}
-                </tbody>
+//                 <tbody>
+//                     ${orderRows}
+//                 </tbody>
 
-            </table>
+//             </table>
 
-            <hr>
+//             <hr>
 
-            <h2 style="text-align:right;">
-                Total: ₹${total}
-            </h2>
+//             <h2 style="text-align:right;">
+//                 Total: ₹${total}
+//             </h2>
 
-            <p style="color:#666;">
-                Please process this order.
-            </p>
+//             <p style="color:#666;">
+//                 Please process this order.
+//             </p>
 
-        </div>
-    `
+//         </div>
+//     `
         };
 
 
