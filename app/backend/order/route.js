@@ -96,13 +96,16 @@ export async function POST(req) {
         //console.log("Saved order")
         const emailSubject = 'Fruits order';
         const emailText = `
-      Hello Boss!! Another fruits order
-      
-      ${name},
-      :
-      - Phone: ${phone}
-      - Order: ${JSON.stringify(order)}
-      - Total: ${total}
+     New Payal Fruits Order
+
+Customer: ${name}
+Phone: ${phone}
+
+${order.map(item =>
+                `${item.name} - ${item.qty} ${item.unit} - ₹${item.price} - ₹${item.price * item.qty}`
+            ).join("\n")}
+
+Total: ₹${total}
     `;
 
         // Send email
@@ -112,17 +115,7 @@ export async function POST(req) {
             subject: `🍎 New Order from ${name}`,
 
              text: emailText
-// New Payal Fruits Order
-
-// Customer: ${name}
-// Phone: ${phone}
-
-// ${order.map(item =>
-//                 `${item.name} - ${item.qty} ${item.unit} - ₹${item.price} - ₹${item.price * item.qty}`
-//             ).join("\n")}
-
-// Total: ₹${total}
-//     `,
+,
 
 //             html: `
 //         <div style="font-family: Arial, sans-serif; max-width: 650px; margin: auto;">
